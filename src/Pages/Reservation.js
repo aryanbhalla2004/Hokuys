@@ -102,11 +102,7 @@ const Reservation = () => {
 						<li><a href="#0"><i class="icon_documents_alt"></i>Et dicit vidisse epicurei pri</a></li>
 					</ul>
 				</div>
-			</div>
-			<Helmet script={[{src: 'js/common_scripts.min.js'}]}/>
-      <Helmet script={[{src: 'js/common_func.js'}]}/>
-      <Helmet script={[{src: 'assets/validate.js'}]}/>
-    
+			</div>    
 	</main>
   )
 }

@@ -1,8 +1,15 @@
 import { Helmet } from "react-helmet";
-
-const Help = () => {
+import { useEffect } from "react/cjs/react.development";
+const Help = (props) => {
+	useEffect(() => {
+		props.hel()
+	}, [])
+	
   return (
+		<>
+		{props.hel()}
     <main>
+			
 			<Helmet link={[{rel: "stylesheet", href: 'css/help.css'}]}/>
 		
 		<div class="hero_single inner_pages background-image" data-background="url(img/hero_general_2.jpg)">
@@ -104,11 +111,8 @@ const Help = () => {
 					</ul>
 				</div>
 			</div>
-			<Helmet script={[{src: 'js/common_scripts.min.js'}]}/>
-      <Helmet script={[{src: 'js/common_func.js'}]}/>
-      <Helmet script={[{src: 'assets/validate.js'}]}/>
-    
-	</main>
+		</main>
+		</>
   )
 }
 

@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet";
 const Contact = () => {
   return (
     <main>
-     
       <Helmet link={[{rel: "stylesheet", href: 'css/contacts.css'}]}/>
       <div class="hero_single inner_pages background-image" data-background="url(img/home_section_2.jpg)">
         <div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">

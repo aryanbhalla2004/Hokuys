@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 const Checkout = () => {
   return (
 	<main class="bg_gray">
+
 		<Helmet link={[{rel: "stylesheet", href: 'css/order-sign_up.css'}]}/>
 		<Helmet link={[{rel: "stylesheet", href: 'css/detail-page.css'}]}/>
 		<Helmet />

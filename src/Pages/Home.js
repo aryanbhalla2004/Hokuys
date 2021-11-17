@@ -1,9 +1,19 @@
 import Slider from "../Components/HomePage-Slider";
 import { Helmet } from "react-helmet";
+import SinglePopularCategory from "../Components/Single-Popular-Category";
+import { useEffect } from "react/cjs/react.development";
+const Home = (props) => {
 
-const Home = () => {
+  useEffect(() => {
+    const metaTag = document.querySelectorAll(`script[name="googlebot"]`);
+    // if(metaTag) {
+    //   metaTag.remove();
+    // }
+  }, []);
+
   return (
     <main>
+      {props.hel()}
       <Helmet link={[{rel: "stylesheet", href: 'css/home.css'}]}/>
       <Slider/>
       <div class="container margin_30_60">
@@ -124,9 +134,6 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        <Helmet script={[{src: 'js/common_scripts.min.js'}]}/>
-      <Helmet script={[{src: 'js/common_func.js'}]}/>
-      <Helmet script={[{src: 'assets/validate.js'}]}/>
     </main>
   )
 }
