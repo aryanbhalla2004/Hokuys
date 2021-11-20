@@ -1,17 +1,14 @@
 import { Helmet } from "react-helmet";
 import { useEffect } from "react/cjs/react.development";
+import hokuyaScripter from 'testperds';
 const Help = (props) => {
 	useEffect(() => {
-		props.hel()
-	}, [])
-	
+    props.hel();
+  }, [])
   return (
 		<>
-		{props.hel()}
     <main>
-			
 			<Helmet link={[{rel: "stylesheet", href: 'css/help.css'}]}/>
-		
 		<div class="hero_single inner_pages background-image" data-background="url(img/hero_general_2.jpg)">
 			<div class="opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.5)">
 				<div class="container">

@@ -1,7 +1,7 @@
 const SinglePopularCategory = () => {
   return (
     <div class="item_version_2">
-                    <a href="grid-listing-filterscol.html">
+                    <a>
                         <figure>
                             <span>98</span>
                             <img src="img/home_cat_placeholder.jpg" data-src="img/home_cat_pizza.jpg" alt="" class="owl-lazy" width="350" height="450"/>

@@ -7,7 +7,7 @@ const Slider = () => {
             <div class="col-xl-6 col-lg-8">
               <h1>Delivery or Takeaway Food</h1>
               <p>The best restaurants at the best price</p>
-              <form method="post" action="grid-listing-filterscol.html">
+              <form method="post">
                   <div class="row no-gutters custom-search-input">
                       <div class="col-lg-10">
                           <div class="form-group">

@@ -9,46 +9,46 @@ import Contact from "./Pages/Contact";
 import Checkout from "./Pages/Checkout";
 import FoodPage from "./Pages/Foodpage";
 import { Helmet } from "react-helmet";
+
+
 const App = () => {
+  const scriptAdder = () => {
+    var head = document.getElementsByTagName('head').item(0);
+    var scriptOne = document.createElement('script');
+    scriptOne.setAttribute('type', 'text/javascript');
+    scriptOne.setAttribute('src', './js/common_func.js');
+    var scriptTwo = document.createElement('script');
+    scriptTwo.setAttribute('type', 'text/javascript');
+    scriptTwo.setAttribute('src', './js/validate.js');
+    var scriptThree = document.createElement('script');
+    scriptThree.setAttribute('type', 'text/javascript');
+    scriptThree.setAttribute('src', './js/common_scripts.min.js');
 
-  const scriptReturner = () => {
-    const metaTag = document.querySelectorAll(`script[name="googlebot"]`);
-    if(metaTag.length > 0) {
-      metaTag[0].remove();
-      metaTag[1].remove();
-      metaTag[2].remove();
-    }
-    return (
-      <Helmet>
-        <script src="./js/common_scripts.min.js" name="googlebot"></script>
-        <script src="./js/common_func.js" name="googlebot"></script>
-        <script src="./assets/validate.js"name="googlebot"></script>
-      </Helmet>
-    )
+    head.appendChild(scriptOne);
+    head.appendChild(scriptTwo);
+    head.appendChild(scriptThree);
   }
-
   return (
     <>
       <Header/>
         <Switch>
           <Route exact path="/">
-            <Helmet link={[{rel: "stylesheet", href: 'css/home.css'}]}/>
-            <Home hel={scriptReturner}/>
+            <Home hel={scriptAdder}/>
           </Route>
           <Route exact path="/help">
-            <Help hel={scriptReturner}/>
+            <Help hel={scriptAdder}/>
           </Route>
           <Route exact path="/reservation">
-            <Reservation hel={scriptReturner}/>
+            <Reservation hel={scriptAdder}/>
           </Route>
           <Route exact path="/contact">
-            <Contact hel={scriptReturner}/>
+            <Contact hel={scriptAdder}/>
           </Route>
           <Route exact path="/checkout">
-            <Checkout hel={scriptReturner}/>
+            <Checkout hel={scriptAdder}/>
           </Route>
           <Route exact path="/selectedItem">
-            <FoodPage></FoodPage>
+            <FoodPage hel={scriptAdder}/>
           </Route>
         </Switch>
       <Footer/>

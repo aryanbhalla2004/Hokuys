@@ -1,7 +1,9 @@
 import { Helmet } from "react-helmet";
-
-const FoodPage = () => {
-  
+import { useEffect } from "react";
+const FoodPage = (props) => {
+	useEffect(() => {
+    props.hel();
+  }, [])
   return (
 		
     <main>

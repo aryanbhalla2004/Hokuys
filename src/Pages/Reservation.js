@@ -1,5 +1,9 @@
 import { Helmet } from "react-helmet";
-const Reservation = () => {
+import { useEffect } from "react";
+const Reservation = (props) => {
+	useEffect(() => {
+    props.hel();
+  }, [])
   return (
     <main>
 			<Helmet link={[{rel: "stylesheet", href: 'css/help.css'}]}/>

@@ -1,6 +1,9 @@
 import { Helmet } from "react-helmet";
-
-const Contact = () => {
+import { useEffect } from "react";
+const Contact = (props) => {
+  useEffect(() => {
+    props.hel();
+  }, [])
   return (
     <main>
       <Helmet link={[{rel: "stylesheet", href: 'css/contacts.css'}]}/>
