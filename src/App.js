@@ -27,6 +27,8 @@ const App = () => {
     head.appendChild(scriptOne);
     head.appendChild(scriptTwo);
     head.appendChild(scriptThree);
+
+    window.scrollTo(0, 0);
   }
   return (
     <>
@@ -48,6 +50,9 @@ const App = () => {
             <Checkout hel={scriptAdder}/>
           </Route>
           <Route exact path="/selectedItem">
+            <FoodPage hel={scriptAdder}/>
+          </Route>
+          <Route exact path="/item">
             <FoodPage hel={scriptAdder}/>
           </Route>
         </Switch>

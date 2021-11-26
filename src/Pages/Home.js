@@ -1,6 +1,7 @@
-import Slider from "../Components/HomePage-Slider";
+import Slider from "../Components/HomePage-Comp/HomePage-Slider";
 import { Helmet } from "react-helmet";
-import SinglePopularCategory from "../Components/Single-Popular-Category";
+import SinglePopularCategory from "../Components/HomePage-Comp/Single-Popular-Category";
+import SingleFoodItem from "../Components/HomePage-Comp/Single-items";
 import { useEffect } from "react/cjs/react.development";
 import { Link } from "react-router-dom";
 
@@ -30,33 +31,13 @@ const Home = (props) => {
         <div className="container margin_60_40">
           <div className="main_title">
             <span><em></em></span>
-            <h2>Top Rated Restaurants</h2>
+            <h2>Top Rated Items</h2>
             <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
             <Link>View All &rarr;</Link>
           </div>
           <div className="row add_bottom_25">
             {[1,2,3,4,5,6].map(item => (
-                <div className="col-lg-6" key={item}>
-                  <div className="list_home">
-                    <ul>
-                      <li>
-                        <Link to="/selection">
-                          <figure>
-                            <img src="img/location_list_placeholder.png" data-src="img/location_list_1.jpg" alt="" className="lazy" width="350" height="233"/>
-                          </figure>
-                          <div className="score"><strong>9.5</strong></div>
-                          <em>Italian</em>
-                          <h3>La Monnalisa</h3>
-                          <small>8 Patriot Square E2 9NF</small>
-                          <ul>
-                            <li><span className="ribbon off">-30%</span></li>
-                            <li>Average price $35</li>
-                          </ul>
-                        </Link>
-                      </li>        
-                    </ul>
-                  </div>
-                </div>
+              <SingleFoodItem key={item}/>
             ))}
             <div className="banner lazy" data-bg="url(img/banner_bg_desktop.jpg)">
               <div className="wrapper d-flex align-items-center opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.3)">
